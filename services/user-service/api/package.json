@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "node video live stream app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "levin",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "config": "^3.1.0",
+    "connect-ensure-login": "^0.1.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.6.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "popper.js": "^1.15.0",
+    "session-file-store": "^1.3.0",
+    "shortid": "^2.2.14"
+  }
+}

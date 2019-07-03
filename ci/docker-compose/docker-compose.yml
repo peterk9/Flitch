@@ -1,0 +1,27 @@
+version: '3.0'
+
+services:
+  
+  userdb:
+    image: peterk9/video-live-streaming-user-database:latest
+    restart: always
+    ports:
+      - '27017:27017'
+      - '28017:28017'
+
+  user-service:
+    image: peterk9/video-live-streaming-user-service:latest
+    ports:
+      - "3030:3030"
+    depends_on:
+      - userdb
+    restart: always
+  
+  video-streamer:
+    image: peterk9/video-live-streaming-video-streamer:latest
+    restart: always
+    depends_on: 
+      - user-service
+    ports:
+      - '1935:1935'
+      - '8888:8888'
